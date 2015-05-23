@@ -7,14 +7,10 @@ using System;
 namespace JS.Library
 {
     /// <summary>
-    /// Provides a single encapsulating class for all your application logic
+    /// Provides a single encapsulating class for all your application logic. Requires a public static Instance variable on the derived class.
     /// </summary>
     public class ApplicationLogic
     {
-        #region Static Properties
-        /// <summary>
-        /// The current instance of the Application Logic class.
-        /// </summary>
         public static ApplicationLogic Current
         {
             get
@@ -26,7 +22,6 @@ namespace JS.Library
             }
         }
         private static ApplicationLogic _instance;
-        #endregion
 
         #region Ctor
         /// <summary>
@@ -66,7 +61,7 @@ namespace JS.Library
         {
             get
             {
-                if (IsInitialized)
+                if (!IsInitialized)
                     return _cacheProvider;
                 else
                     throw new InvalidOperationException("Application Logic needs to be initialized before accessing.");
@@ -81,7 +76,7 @@ namespace JS.Library
         {
             get
             {
-                if (IsInitialized)
+                if (!IsInitialized)
                     return _databaseProvider;
                 else
                     throw new InvalidOperationException("Application Logic needs to be initialized before accessing.");
@@ -96,7 +91,7 @@ namespace JS.Library
         {
             get
             {
-                if (IsInitialized)
+                if (!IsInitialized)
                     return _settingsProvider;
                 else
                     throw new InvalidOperationException("Application Logic needs to be initialized before accessing.");

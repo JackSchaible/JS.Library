@@ -1,5 +1,5 @@
-D:\Projects\JS.Library\JS.Library\JS.Library\obj\Debug\JS.Library.csprojResolveAssemblyReference.cache
 D:\Projects\JS.Library\JS.Library\JS.Library\bin\Debug\JS.Library.dll
 D:\Projects\JS.Library\JS.Library\JS.Library\bin\Debug\JS.Library.pdb
+D:\Projects\JS.Library\JS.Library\JS.Library\obj\Debug\JS.Library.csprojResolveAssemblyReference.cache
 D:\Projects\JS.Library\JS.Library\JS.Library\obj\Debug\JS.Library.dll
 D:\Projects\JS.Library\JS.Library\JS.Library\obj\Debug\JS.Library.pdb

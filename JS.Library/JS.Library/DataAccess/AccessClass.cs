@@ -78,6 +78,14 @@ namespace JS.Library.DataAccess
         /// Adds a list of items to the cache, using the specified name.
         /// </summary>
         /// <param name="items">A List of items to add to the cache.</param>
+        public void AddListToCache(List<T> items)
+        {
+            ApplicationLogic.Current.CacheProvider.Set(items, ListCacheName);
+        }
+        /// <summary>
+        /// Adds a list of items to the cache, using the specified name.
+        /// </summary>
+        /// <param name="items">A List of items to add to the cache.</param>
         /// <param name="name">The name to use when adding the list to the cache.</param>
         public void AddListToCache(List<T> items, string name)
         {
@@ -97,11 +105,20 @@ namespace JS.Library.DataAccess
         /// Adds a single item to the cache, using the specified name, and an additional query identifier.
         /// </summary>
         /// <param name="items">A List of items to add to the cache.</param>
-        /// <param name="name">The name to use when adding the list to the cache.</param>
+        /// <param name="name">The name to use when adding the get to the cache.</param>
         /// <param name="queryIdentifier">An additional identifier to use.</param>
         public void AddGetToCache(T item, string name, string queryIdentifier)
         {
             ApplicationLogic.Current.CacheProvider.Set(item, GetCacheName(queryIdentifier + name));
+        }
+        /// <summary>
+        /// Adds a single item to the cache, using the specified name, and an additional query identifier.
+        /// </summary>
+        /// <param name="items">A List of items to add to the cache.</param>
+        /// <param name="queryIdentifier">An additional identifier to use.</param>
+        public void AddGetToCache(T item, string queryIdentifier)
+        {
+            ApplicationLogic.Current.CacheProvider.Set(item, GetCacheName(queryIdentifier));
         }
         #endregion
 
